@@ -1,73 +1,154 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/* Reset básico para asegurar que todos los navegadores tengan el mismo comportamiento */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    box-sizing: border-box;
 }
 
+/* Estilos globales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilos de la cabecera */
 header {
-    background-color: #007bff;
+    background-color: #3b82f6;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
+    border-bottom: 8px solid #1e40af;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2.5em;
+    font-size: 2.8em;
+    margin-bottom: 10px;
 }
 
 header p {
-    margin-top: 10px;
     font-size: 1.2em;
 }
 
+/* Estilos de la sección de contenido */
 .content {
-    padding: 20px;
+    padding: 30px 20px;
     background-color: #ffffff;
-    margin: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
 }
 
 .content h2 {
-    color: #007bff;
+    font-size: 2.2em;
+    color: #1e40af;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
 .git-image {
     width: 100%;
-    max-width: 300px;
-    margin-top: 20px;
-}
-
-.interactive {
-    padding: 20px;
-    margin: 20px;
-    background-color: #e9ecef;
+    max-width: 350px;
+    margin: 20px auto;
+    display: block;
     border-radius: 8px;
 }
 
+/* Estilos de la sección interactiva */
+.interactive {
+    padding: 30px 20px;
+    margin: 20px auto;
+    background-color: #edf2f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.interactive h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
 .interactive button {
-    background-color: #28a745;
+    background-color: #10b981;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-size: 1.1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .interactive button:hover {
-    background-color: #218838;
+    background-color: #059669;
 }
 
+/* Estilos del pie de página */
 footer {
-    text-align: center;
     background-color: #333;
     color: white;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* Media queries para hacer la página responsive */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    header p {
+        font-size: 1.1em;
+    }
+
+    .content h2, .interactive h3 {
+        font-size: 1.8em;
+    }
+
+    .git-image {
+        max-width: 80%;
+    }
+
+    .interactive button {
+        font-size: 1em;
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .content h2, .interactive h3 {
+        font-size: 1.6em;
+    }
+
+    .content p, .interactive button {
+        font-size: 1em;
+    }
+
+    .git-image {
+        max-width: 90%;
+    }
 }
